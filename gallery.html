@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gallary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Gallary</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/my_logo.svg" alt="apk graphics logo" class="logo">
+
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="./images/ham.svg" alt="toogle menu" class="menu" id="menu">
+                </a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><img src="./images/exit.svg" alt="exit menu"></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Gallary</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>OUR WORK</h2>
+            <p class="subhead">We design & create qualty Posters, Logos & Web applications best for you</p>
+        </section>
+    </div>
+    <div class="gray-container ">
+        <div class="container">
+            <div class="slides">
+                <div class="slide">
+
+
+                    <img src="./posters/carwasg.png" alt="Car Wash Poster" />
+                </div>
+                <div class="slide">
+                    <img src="posters/uafcRev.png" alt="UAFC Revival Poster" />
+                </div>
+                <div class="slide">
+                    <img src="posters/wnight.png" alt="NJM Worshipnight Poster" />
+                </div>
+                <div class="slide">
+                    <img src="posters/worshipnightUAFC.png" alt="UAFC Worshipnight Poster" />
+                </div>
+                <div class="slide">
+                    <img src="posters/logos.png" alt="Tickets and logos" />
+                </div>
+                <div class="slide">
+                    <img src="posters/ygiccamp.png" alt="Ygic camp Poster" />
+                </div>
+
+            </div>
+            <div class="slide-controls">
+                <button id="prev-btn">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <button id="next-btn">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="./images/my_logo.svg" alt="logo">
+                </a>
+                <p class="address">961 BLOCK H, SOSHANGUVE, <br> 0152</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function (e) {
+            nav.classList.toggle('hide-mobile')
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function (e) {
+            nav.classList.add('hide-mobile')
+            e.preventDefault();
+        });
+        const slideContainer = document.querySelector('.container');
+        const slide = document.querySelector('.slides');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const interval = 4000;
+
+        let slides = document.querySelectorAll('.slide');
+        let index = 1;
+        let slideId;
+
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[slides.length - 1].cloneNode(true);
+
+        firstClone.id = 'first-clone';
+        lastClone.id = 'last-clone';
+
+        slide.append(firstClone);
+        slide.prepend(lastClone);
+
+        const slideWidth = slides[index].clientWidth;
+
+        slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+        console.log(slides);
+
+        const startSlide = () => {
+            slideId = setInterval(() => {
+                moveToNextSlide();
+            }, interval);
+        };
+
+        const getSlides = () => document.querySelectorAll('.slide');
+
+        slide.addEventListener('transitionend', () => {
+            slides = getSlides();
+            if (slides[index].id === firstClone.id) {
+                slide.style.transition = 'none';
+                index = 1;
+                slide.style.transform = `translateX(${-slideWidth * index}px)`;
+            }
+
+            if (slides[index].id === lastClone.id) {
+                slide.style.transition = 'none';
+                index = slides.length - 2;
+                slide.style.transform = `translateX(${-slideWidth * index}px)`;
+            }
+        });
+
+        const moveToNextSlide = () => {
+            slides = getSlides();
+            if (index >= slides.length - 1) return;
+            index++;
+            slide.style.transition = '.7s ease-out';
+            slide.style.transform = `translateX(${-slideWidth * index}px)`;
+        };
+
+        const moveToPreviousSlide = () => {
+            if (index <= 0) return;
+            index--;
+            slide.style.transition = '.7s ease-out';
+            slide.style.transform = `translateX(${-slideWidth * index}px)`;
+        };
+
+        slideContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideId);
+        });
+
+        slideContainer.addEventListener('mouseleave', startSlide);
+        nextBtn.addEventListener('click', moveToNextSlide);
+        prevBtn.addEventListener('click', moveToPreviousSlide);
+
+        startSlide();
+
+    </script>
+</body>
+
+</html>

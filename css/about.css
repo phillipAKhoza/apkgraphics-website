@@ -1,0 +1,1043 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  text-align: center;
+  padding: 0.8em 1.2em;
+}
+.logo {
+  width: 150px;
+}
+.hide-mobile {
+  display: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  width: 30px;
+  margin-top: 45%;
+}
+h2,
+.subhead {
+  position: relative;
+  z-index: 3;
+}
+.subhead {
+  font-size: 1.1em;
+}
+
+.gray-container {
+  width: 100%;
+  background: #3c3d3d;
+  color: #fff;
+  margin-top: 5%;
+  padding: 4em 0 2em;
+  border-top-right-radius: 40px;
+  transform: skewY(2deg);
+}
+.gray-container::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #3c3d3d;
+  position: absolute;
+  top: -39px;
+  left: 0;
+  z-index: -3;
+}
+.gray-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: -2;
+  border-radius: 50%;
+}
+.gray-container .container {
+  transform: skewY(-2deg);
+}
+/* start first circle*/
+.circular {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  transform: scale(0.9);
+}
+.circular .inner {
+  position: absolute;
+  z-index: 9;
+  height: 80px;
+  width: 80px;
+  margin: 10px 0 0 10px;
+  background: #3c3d3d;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff0000;
+}
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(99, 27, 27);
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #f50505;
+}
+
+.circle .left .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.circle .right .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+@keyframes right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(160deg);
+  }
+}
+/* end first circle*/
+/* start second circle*/
+.sec-circular {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  transform: scale(0.9);
+}
+.sec-circular .sec-inner {
+  position: absolute;
+  z-index: 9;
+  height: 80px;
+  width: 80px;
+  margin: 10px 0 0 10px;
+  background: #3c3d3d;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sec-circular .sec-numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fcf700;
+}
+.sec-circular .sec-bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(134, 126, 11);
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.sec-circle .sec-bar .sec-progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #ffe600;
+}
+
+.sec-circle .sec-left .sec-progress {
+  z-index: 1;
+  animation: sec-left 4s linear both;
+}
+@keyframes sec-left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.sec-circle .sec-right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.sec-circle .sec-right .sec-progress {
+  animation: sec-right 4s linear both;
+  animation-delay: 4s;
+}
+@keyframes sec-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+/* end second circle*/
+/* start third circle*/
+.third-circular {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  transform: scale(0.9);
+}
+.third-circular .third-inner {
+  position: absolute;
+  z-index: 9;
+  height: 80px;
+  width: 80px;
+  margin: 10px 0 0 10px;
+  background: #3c3d3d;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.third-circular .third-numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0019fc;
+}
+.third-circular .third-bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(22, 39, 114);
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.third-circle .third-bar .third-progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #0509f5;
+}
+
+.third-circle .third-left .third-progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+@keyframes third-left {
+  80% {
+    transform: rotate(180deg);
+  }
+}
+.third-circle .third-right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.third-circle .third-right .third-progress {
+  animation: third-right 4s linear both;
+  animation-delay: 4s;
+}
+@keyframes third-right {
+  100% {
+    transform: rotate(140deg);
+  }
+}
+
+/* end third circle*/
+/*Style Line / right text*/
+
+.gray-container .container .right-text ul li p {
+  font-size: 0.8em;
+  padding: 10px;
+}
+.footer-container {
+  width: 100%;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 3em 0;
+}
+ul.footer-links {
+  margin: 0 auto;
+}
+
+ul.footer-links li {
+  display: inline-block;
+}
+
+ul.footer-links li a {
+  color: #050505;
+  font-size: 0.8em;
+}
+
+.footer-container .container a img {
+  width: 150px;
+}
+nav ul {
+  position: fixed;
+  width: 60%;
+  top: 0;
+  right: 0;
+  text-align: left;
+  background: rgb(36, 41, 44);
+  height: 100%;
+  z-index: 7;
+  padding-top: 3em;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: rgb(60, 66, 70);
+}
+nav ul li a:hover {
+  background-color: rgb(83, 89, 94);
+}
+.exit-btn {
+  margin-bottom: 1em;
+  margin-top: -1.3em;
+  text-align: right;
+  padding: 0 1.4em;
+}
+
+.exit-btn img {
+  width: 15px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 650px) {
+  .container {
+    width: 80%;
+  }
+  .gray-container .container .right-text ul {
+    display: flex;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  .subhead {
+    font-size: 1.4em;
+    margin-bottom: 12%;
+  }
+  .gray-container .container {
+    margin: 0;
+  }
+  .gray-container .container .middle-text {
+    font-size: 1.1em;
+  }
+  p {
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  .gray-container {
+    margin: 0;
+  }
+  nav ul {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .subhead {
+    font-size: 1em;
+  }
+
+  .gray-container .container .left-text {
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding-bottom: 30px;
+  }
+  .gray-container .container .middle-text {
+    width: 55%;
+    float: left;
+    text-align: left;
+    padding: 5px;
+    font-size: 1em;
+    margin-left: 1em;
+  }
+  .gray-container .container .right-text {
+    width: 90%;
+  }
+  .gray-container .container .right-text .skill-cout {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    width: 115%;
+  }
+  .gray-container .container .right-text .skill-cout .skills .headers {
+    font-size: 1.3em;
+    padding-bottom: 50px;
+  }
+  .gray-container .container .right-text .skills {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width: 875px) {
+  .gray-container {
+    padding-top: 5px;
+    width: 100%;
+    margin: auto;
+  }
+  .subhead {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 10%;
+  }
+  .gray-container .left-text {
+    max-width: 20%;
+  }
+  .gray-container .left-text h2 {
+    font-size: 1.5em;
+    text-align: right;
+  }
+  .gray-container .middle-text {
+    max-width: 35%;
+  }
+  .gray-container .middle-text p {
+    font-size: 1em;
+  }
+  .gray-container .container .right-text {
+    max-width: 35%;
+    display: grid;
+    margin: auto;
+  }
+  .gray-container .container .right-text .skill-cout {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .gray-container .container .right-text .skill-cout li {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .gray-container .container .right-text .skill-cout .skills {
+    text-align: left;
+    font-size: 0.5em;
+  }
+  /* start first circle start first circle start first circle start first circle start first circle start first circle start first circle*/
+  .circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.7);
+  }
+  .circular .inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .circular .numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  .circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(99, 27, 27);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #f50505;
+  }
+
+  .circle .left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  @keyframes left {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .circle .right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .circle .right .progress {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(160deg);
+    }
+  }
+  /* end first circle end first circle end first circle end first circle end first circle end first circle end first circle end first circle */
+  /* start second circle start second circle start second circle start second circle start second circle start second circle start second circle*/
+  .sec-circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.7);
+  }
+  .sec-circular .sec-inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sec-circular .sec-numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcf700;
+  }
+  .sec-circular .sec-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(134, 126, 11);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .sec-circle .sec-bar .sec-progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #ffe600;
+  }
+
+  .sec-circle .sec-left .sec-progress {
+    z-index: 1;
+    animation: sec-left 4s linear both;
+  }
+  @keyframes sec-left {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .sec-circle .sec-right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .sec-circle .sec-right .sec-progress {
+    animation: sec-right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes sec-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  /* end second circle end second circle end second circle end second circle end second circle end second circle end second circle end second circle*/
+  /* start third circle start third circle start third circle start third circlestart third circlestart third circlestart third circlestart third circle*/
+  .third-circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.7);
+  }
+  .third-circular .third-inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .third-circular .third-numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0019fc;
+  }
+  .third-circular .third-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(22, 39, 114);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .third-circle .third-bar .third-progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #0509f5;
+  }
+
+  .third-circle .third-left .third-progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  @keyframes third-left {
+    80% {
+      transform: rotate(180deg);
+    }
+  }
+  .third-circle .third-right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .third-circle .third-right .third-progress {
+    animation: third-right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes third-right {
+    100% {
+      transform: rotate(140deg);
+    }
+  }
+
+  /* end third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circle*/
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .gray-container {
+    padding-top: 5px;
+    width: 100%;
+    margin: auto;
+  }
+  .gray-container .container {
+    margin: auto;
+  }
+  .subhead {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 10%;
+  }
+  .gray-container .left-text {
+    max-width: 20%;
+  }
+  .gray-container .left-text h2 {
+    font-size: 1.8em;
+    text-align: right;
+  }
+  .gray-container .middle-text {
+    max-width: 40%;
+  }
+  .gray-container .middle-text p {
+    font-size: 1.1em;
+  }
+  .gray-container .container .right-text {
+    margin: auto;
+    max-width: 35%;
+    display: grid;
+  }
+  .gray-container .container .right-text .skill-cout {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .gray-container .container .right-text .skill-cout li {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .gray-container .container .right-text .skill-cout .skills {
+    text-align: left;
+    font-size: 0.7em;
+  }
+  /* start first circle start first circle start first circle start first circle start first circle start first circle start first circle*/
+  .circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.9);
+  }
+  .circular .inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .circular .numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  .circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(99, 27, 27);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #f50505;
+  }
+
+  .circle .left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  @keyframes left {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .circle .right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .circle .right .progress {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(160deg);
+    }
+  }
+  /* end first circle end first circle end first circle end first circle end first circle end first circle end first circle end first circle */
+  /* start second circle start second circle start second circle start second circle start second circle start second circle start second circle*/
+  .sec-circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.9);
+  }
+  .sec-circular .sec-inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sec-circular .sec-numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcf700;
+  }
+  .sec-circular .sec-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(134, 126, 11);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .sec-circle .sec-bar .sec-progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #ffe600;
+  }
+
+  .sec-circle .sec-left .sec-progress {
+    z-index: 1;
+    animation: sec-left 4s linear both;
+  }
+  @keyframes sec-left {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .sec-circle .sec-right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .sec-circle .sec-right .sec-progress {
+    animation: sec-right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes sec-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  /* end second circle end second circle end second circle end second circle end second circle end second circle end second circle end second circle*/
+  /* start third circle start third circle start third circle start third circlestart third circlestart third circlestart third circlestart third circle*/
+  .third-circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.9);
+  }
+  .third-circular .third-inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .third-circular .third-numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0df505;
+  }
+  .third-circular .third-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(43, 114, 22);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .third-circle .third-bar .third-progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #0df505;
+  }
+
+  .third-circle .third-left .third-progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  @keyframes third-left {
+    80% {
+      transform: rotate(180deg);
+    }
+  }
+  .third-circle .third-right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .third-circle .third-right .third-progress {
+    animation: third-right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes third-right {
+    100% {
+      transform: rotate(140deg);
+    }
+  }
+
+  /* end third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circle*/
+  .show-desktop {
+    display: block;
+    margin: 0 auto 13% auto;
+  }
+  .hide-desktop {
+    display: none;
+  }
+  nav ul {
+    position: inherit;
+    width: auto;
+    background: none;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    color: black;
+    background-color: inherit;
+    text-align: right;
+    padding: 1em 0.5em;
+    width: 90px;
+  }
+  nav ul li a:hover {
+    background-color: inherit;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+  .gray-container {
+    padding-top: 10px;
+    width: 100%;
+    margin: auto;
+  }
+  .gray-container .container {
+    margin: auto;
+  }
+  .subhead {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 10%;
+  }
+  .gray-container .left-text {
+    max-width: 20%;
+  }
+  .gray-container .left-text h2 {
+    font-size: 1.8em;
+    text-align: right;
+  }
+  .gray-container .middle-text {
+    max-width: 40%;
+  }
+  .gray-container .middle-text p {
+    font-size: 1.1em;
+  }
+  .gray-container .container .right-text {
+    margin: auto;
+    max-width: 35%;
+    display: grid;
+  }
+  .gray-container .container .right-text .skill-cout {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .gray-container .container .right-text .skill-cout li {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .gray-container .container .right-text .skill-cout .skills {
+    text-align: left;
+    font-size: 0.7em;
+  }
+
+  /* end third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circle*/
+  nav ul {
+    position: inherit;
+    width: auto;
+    background: none;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    color: black;
+    background-color: inherit;
+    text-align: right;
+    padding: 1em 2em;
+    width: 90px;
+  }
+  nav ul li a:hover {
+    background-color: inherit;
+  }
+}

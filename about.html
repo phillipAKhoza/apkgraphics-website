@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/my_logo.svg" alt="apk graphics logo" class="logo">
+
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="./images/ham.svg" alt="toogle menu" class="menu" id="menu">
+                </a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><img src="./images/exit.svg" alt="exit menu"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallary</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>ABOUT APK GRAPHICS</h2>
+            <p class="subhead">We design & create qualty Posters, Logos & Web applications best for you</p>
+        </section>
+
+    </div>
+    <div class="gray-container ">
+        <div class="container">
+            <ul>
+                <li class="left-text">
+                    <h2>Designing Amazing Media with Passion Just for You.</h2>
+                </li>
+                <li class="middle-text">
+                    <p>APK GRAPHICS is a media corporation established to help businesses to take advantage of exposing
+                        their brand and increasing productivity through Technology. Cutting time for word of mouth
+                        advertisement and increasing their brands farmiliarity through the internet. We are
+                        passionate about technology and we are eager to create quality that will help businesses to grow
+                        their brand. Our team has young bright minds with fresh and strong ideas to grow your
+                        business at an affordable price. We are very confident that we can meet your requirements</p>
+                </li>
+                <li class="right-text ">
+                    <ul class="skill-cout">
+
+                        <li>
+                            <div class="circular">
+                                <div class="inner"> </div>
+                                <div class="numb">%</div>
+                                <div class="circle">
+                                    <div class="bar left">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="bar right">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                                <!-- <h4>Poster Design</h4>-->
+                                <p><span class="headers"><strong>Poster Design</strong></span><br> We design 2D & 3D
+                                    posters with various
+                                    sizes as well as formarts pdf,png,jpg etc, we
+                                    also
+                                    provide the client an opportunity to come with their design</p><br>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sec-circular">
+                                <div class="sec-inner"> </div>
+                                <div class="sec-numb">%</div>
+                                <div class="sec-circle">
+                                    <div class="sec-bar sec-left">
+                                        <div class="sec-progress"></div>
+                                    </div>
+                                    <div class="sec-bar sec-right">
+                                        <div class="sec-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                                <!-- <h4>Web Applications</h4>-->
+                                <p> <span class="headers"><strong>Web Applications</strong></span><br> design websites
+                                    based on the
+                                    requirements of the client and we ensure that the web
+                                    application is accessed through all smart devices.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="third-circular">
+                                <div class="third-inner"> </div>
+                                <div class="third-numb">%</div>
+                                <div class="third-circle">
+                                    <div class="third-bar third-left">
+                                        <div class="third-progress"></div>
+                                    </div>
+                                    <div class="third-bar third-right">
+                                        <div class="third-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills">
+                                <!-- <h4>Logo Design</h4>-->
+                                <p><span class="headers"><strong>Logo Design</strong></span><br>We design 2D & 3D logos
+                                    with various
+                                    sizes as well as formarts pdf,png,jpg etc, we
+                                    also
+                                    provide our clients an opportunity to come with their designs and specifics</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="./images/my_logo.svg" alt="logo">
+                </a>
+                <p class="address">961 BLOCK H, SOSHANGUVE, <br> 0152</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function (e) {
+            nav.classList.toggle('hide-mobile')
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function (e) {
+            nav.classList.add('hide-mobile')
+            e.preventDefault();
+        });
+
+        const numb = document.querySelector(".numb")
+        const numb2 = document.querySelector(".sec-numb")
+        const numb3 = document.querySelector(".third-numb")
+        let counter = 0;
+        setInterval(() => {
+            if (counter == 90) {
+                clearInterval();
+            } else {
+                counter += 1;
+                numb.textContent = counter + "%";
+            }
+        }, 90);
+
+
+        let counter2 = 0;
+        setInterval(() => {
+            if (counter2 == 70) {
+                clearInterval();
+            } else {
+                counter2 += 1;
+                numb2.textContent = counter2 + "%";
+            }
+        }, 120);
+
+        let counter3 = 0;
+        setInterval(() => {
+            if (counter3 == 80) {
+                clearInterval();
+            } else {
+                counter3 += 1;
+                numb3.textContent = counter3 + "%";
+            }
+        }, 100);
+
+    </script>
+</body>
+
+</html>

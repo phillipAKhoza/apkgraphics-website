@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK GRAPHICS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img src="./images/my_logo.svg" alt="apk graphics logo" class="logo">
+
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="./images/ham.svg" alt="toogle menu" class="menu" id="menu">
+                </a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><img src="./images/exit.svg" alt="exit menu"></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Gallary</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <img src="./images/graphics.svg" alt="Hraphics image" class="graphics">
+            <h1><strong>APK GRAPHICS</strong> <br>Your Home for Graphics</h1>
+            <p class="subhead">If it doesn't have wings it's not us</p>
+            <img src="./images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+        </section>
+    </div>
+    <div class="blue-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="./images/poster-icon.svg" alt="posterdesign picture">
+                    <p>Poster Design: We design various posters based on the requirements of the client. Our poster
+                        sizes and dimensions differ in accordance to clients requirements.</p>
+                </li>
+                <li>
+                    <img src="./images/Web-Design-Icon.svg" alt="webdesign picture">
+                    <p>Web Applications: We Disign & Create 100% Responsive Web apps using mobile first
+                        approach. We pride our self in making your web application accesible anywhere and everywhere.
+                    </p>
+                </li>
+                <li>
+                    <img src="./images/logo-icon.svg" alt="logodesign picture">
+                    <p>Logo Design: We design various logos to suit and satisfy your business needs.Our Logo
+                        sizes and dimensions differ in accordance to our clients requirements</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gray-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="./images/DSC00892.jpg" alt="user setimonial" class="users">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</blockquote>
+                        <figcaption>-UAFC SOSHANGUVE</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./images/nkuna.jpg" alt="user setimonial" class="users">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore
+                            et dolore magna
+                            aliqua.</blockquote>
+                        <figcaption>- Nkuna's Car wash</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Let us help you advertise your brand</h2>
+        <a href="#" class="cta">Get Started</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="./images/my_logo.svg" alt="logo">
+                </a>
+                <p class="address">961 BLOCK H, SOSHANGUVE, <br> 0152</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function (e) {
+            nav.classList.toggle('hide-mobile')
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function (e) {
+            nav.classList.add('hide-mobile')
+            e.preventDefault();
+        });
+
+    </script>
+</body>
+
+</html>

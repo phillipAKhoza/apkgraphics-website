@@ -1,0 +1,326 @@
+@media only screen and (min-width: 1024px) {
+  .gray-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .gray-container .container {
+    margin: 0;
+  }
+  .show-desktop {
+    display: block;
+    margin: 0 auto 13% auto;
+  }
+  .hide-desktop {
+    display: none;
+  }
+  nav ul {
+    position: inherit;
+    width: auto;
+    background: none;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    color: black;
+    background-color: inherit;
+    text-align: right;
+    padding: 1em 2em;
+  }
+  nav ul li a:hover {
+    background-color: inherit;
+  }
+  h2 {
+    font-size: 2.4em;
+  }
+  .subhead {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+
+  .gray-container .container .left-text {
+    float: left;
+    width: 10%;
+    font-size: 0.9em;
+    text-align: right;
+  }
+  .gray-container .container .middle-text {
+    float: left;
+    width: 30%;
+    margin-left: -10px;
+    font-size: 0.9em;
+    padding-top: 0;
+  }
+  .gray-container .container .right-text {
+    float: right;
+    width: 30%;
+  }
+
+  .gray-container .container .right-text .skill-cout {
+    display: inline;
+  }
+
+  /* right text styleright text styleright text styleright text styleright text styleright text styleright text styleright text styleright text styleright text style*/
+
+  .gray-container .container .right-text .skills {
+    font-size: 0.6em;
+    text-align: left;
+    text-align: start;
+  }
+  .gray-container .container .right-text .skills .headers {
+    font-size: 1.8em;
+    padding-bottom: 30px;
+  }
+
+  .gray-container .container .right-text ul {
+    float: right;
+  }
+  /* right text styleright text styleright text styleright text styleright text styleright text styleright text styleright text styleright text styleright text style*/
+
+  .gray-container .container .left-text {
+    text-align: left;
+    width: 30%;
+    padding: 10px;
+  }
+  .gray-container .container .left-text h2 {
+    font-size: 2em;
+    text-align: right;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .gray-container .container .middle-text p {
+    font-size: 1em;
+    padding: 10px;
+    line-height: 2em;
+    padding-top: 30px;
+    text-align: left;
+    width: 90%;
+  }
+
+  /* start first circle start first circle start first circle start first circle start first circle start first circle start first circle*/
+  .circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.9);
+  }
+  .circular .inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .circular .numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  .circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(99, 27, 27);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #f50505;
+  }
+
+  .circle .left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  @keyframes left {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .circle .right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .circle .right .progress {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(160deg);
+    }
+  }
+  /* end first circle end first circle end first circle end first circle end first circle end first circle end first circle end first circle */
+  /* start second circle start second circle start second circle start second circle start second circle start second circle start second circle*/
+  .sec-circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.9);
+  }
+  .sec-circular .sec-inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sec-circular .sec-numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcf700;
+  }
+  .sec-circular .sec-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(134, 126, 11);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .sec-circle .sec-bar .sec-progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #ffe600;
+  }
+
+  .sec-circle .sec-left .sec-progress {
+    z-index: 1;
+    animation: sec-left 4s linear both;
+  }
+  @keyframes sec-left {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  .sec-circle .sec-right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .sec-circle .sec-right .sec-progress {
+    animation: sec-right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes sec-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  /* end second circle end second circle end second circle end second circle end second circle end second circle end second circle end second circle*/
+  /* start third circle start third circle start third circle start third circlestart third circlestart third circlestart third circlestart third circle*/
+  .third-circular {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.9);
+  }
+  .third-circular .third-inner {
+    position: absolute;
+    z-index: 9;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0 0 10px;
+    background: #3c3d3d;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .third-circular .third-numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0019fc;
+  }
+  .third-circular .third-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(22, 39, 114);
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+  }
+  .third-circle .third-bar .third-progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #0509f5;
+  }
+
+  .third-circle .third-left .third-progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  @keyframes third-left {
+    80% {
+      transform: rotate(180deg);
+    }
+  }
+  .third-circle .third-right {
+    z-index: 3;
+    transform: rotate(180deg);
+  }
+  .third-circle .third-right .third-progress {
+    animation: third-right 4s linear both;
+    animation-delay: 4s;
+  }
+  @keyframes third-right {
+    100% {
+      transform: rotate(140deg);
+    }
+  }
+
+  /* end third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circleend third circle*/
+  .footer-container .container p {
+    font-size: 1.5em;
+  }
+  .footer-container .container a {
+    width: 160px;
+  }
+  .footer-container .container .footer-links {
+    font-size: 1.5em;
+  }
+}
