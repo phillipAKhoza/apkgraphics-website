@@ -140,10 +140,10 @@ nav ul li a:hover {
 
 .slides {
   display: flex;
-  height: 100%;
+  height: auto;
 }
 .slide {
-  min-width: 100%;
+  max-width: 100%;
   position: relative;
   background-size: 100% 100%;
 }
