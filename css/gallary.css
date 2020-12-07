@@ -6,7 +6,7 @@ body {
 }
 .container {
   text-align: center;
-  padding: 0.8em 1.2em;
+  padding: 0.8em 0.8em;
 }
 .logo {
   width: 150px;
@@ -104,7 +104,7 @@ nav ul li a:hover {
   background: #3c3d3d;
   color: #fff;
   margin-top: 5%;
-  padding: 4em 0 2em;
+  padding: 1em 0 1em;
   border-top-right-radius: 40px;
   transform: skewY(2deg);
 }
@@ -129,23 +129,21 @@ nav ul li a:hover {
   z-index: -2;
   border-radius: 50%;
 }
-.gray-container .container {
+.gray-container .Image_container {
   transform: skewY(-2deg);
+}
+.Image_container {
   margin: 0 auto;
   width: 100%;
-  height: 900px;
-  position: relative;
+  height: auto;
   overflow: hidden;
 }
-
 .slides {
   display: flex;
-  height: auto;
+  height: 100%;
 }
 .slide {
-  max-width: 100%;
-  position: relative;
-  background-size: 100% 100%;
+  min-width: 100%;
 }
 .slide img {
   width: 100%;
@@ -154,7 +152,7 @@ nav ul li a:hover {
 .slide-controls {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 0px;
   transform: translateY(-50%);
   width: 100%;
   display: flex;
@@ -165,7 +163,7 @@ nav ul li a:hover {
 #prev-btn {
   cursor: pointer;
   background: transparent;
-  font-size: 50px;
+  font-size: 30px;
   height: 60px;
   border: none;
   padding: 10px;
@@ -182,4 +180,198 @@ nav ul li a:hover {
   transform: translateY(-50%);
   font-size: 60px;
   color: white;
+}
+@media only screen and (min-width: 375px) {
+  .Image_container {
+    margin: 0 auto;
+    width: 100%;
+    height: 33em;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    height: 100%;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #next-btn,
+  #prev-btn {
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    color: rgb(12, 12, 12);
+  }
+  #next-btn:focus,
+  #prev-btn:focus {
+    outline: none;
+  }
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: white;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2.3em;
+    margin: 1em;
+  }
+  .subhead {
+    font-size: 1.4em;
+  }
+  .Image_container {
+    margin: 0 auto;
+    width: 80%;
+    height: 35em;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    height: 100%;
+  }
+  .slide {
+    min-width: 100%;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #next-btn,
+  #prev-btn {
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    color: rgb(12, 12, 12);
+  }
+  #next-btn:focus,
+  #prev-btn:focus {
+    outline: none;
+  }
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-size: 60px;
+  }
+  nav ul {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 875px) {
+  .subhead {
+    margin-bottom: 5%;
+  }
+  .Image_container {
+    margin: 0 auto;
+    width: 70%;
+    height: 35em;
+    overflow: hidden;
+  }
+  .footer-container ul {
+    margin: 4% 0 0;
+  }
+  .footer-container {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .show-desktop {
+    display: block;
+    margin: 0 auto 13% auto;
+  }
+  .hide-desktop {
+    display: none;
+  }
+  nav ul {
+    position: inherit;
+    width: auto;
+    background: none;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    color: black;
+    background-color: inherit;
+    text-align: right;
+    padding: 1em 0;
+    margin: 0 1em;
+    width: 95px;
+  }
+  nav ul li a:hover {
+    background-color: inherit;
+  }
+  .Image_container {
+    margin: 0 auto;
+    width: 60%;
+    height: 40em;
+    overflow: hidden;
+  }
+  .footer-container {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .container {
+    width: 70%;
+  }
+  .gray-container {
+    padding: 7em 0 2em;
+  }
+
+  h2 {
+    margin-top: 4em;
+  }
+  .footer-container {
+    font-size: 1.5em;
+  }
+  .footer-container ul {
+    margin: 4% 0 0;
+  }
 }
